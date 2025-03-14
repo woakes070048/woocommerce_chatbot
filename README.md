@@ -29,13 +29,17 @@ An intelligent chatbot assistant for WooCommerce stores that helps customers wit
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/woocommerce-chatbot.git
+   git clone https://github.com/kadavilrahul/woocommerce-chatbot.git
+   ```
+   ```bash
    cd woocommerce-chatbot
    ```
 
 2. Create and activate a virtual environment:
    ```bash
    python -m venv venv
+   ```
+   ```bash
    source venv/bin/activate  # On Windows, use: venv\Scripts\activate
    ```
 
@@ -70,7 +74,7 @@ An intelligent chatbot assistant for WooCommerce stores that helps customers wit
 
 2. Open the client interface in your web browser:
    ```
-   /path/to/Client/index1.html
+   Client/index1.html
    ```
 
 ## 📚 API Usage

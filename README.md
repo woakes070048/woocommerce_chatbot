@@ -12,10 +12,11 @@ An intelligent chatbot assistant for WooCommerce stores that helps customers wit
 
 ## 🛠️ Technology Stack
 
-- **Backend**: Flask (Python)
-- **AI Model**: Google Gemini AI
+- **Language**: Python
+- **Backend**: Flask (Python library)
+- **AI Model**: Google Gemini AI (LLM)
 - **Database**: MySQL (WooCommerce database)
-- **Agent Framework**: Agno
+- **Agent Framework**: Agno (Python library)
 - **Frontend**: HTML/JavaScript (Sample included)
 
 ## 📋 Prerequisites

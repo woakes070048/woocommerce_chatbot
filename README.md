@@ -72,8 +72,13 @@ An intelligent chatbot assistant for WooCommerce stores that helps customers wit
    ```bash
    python app.py
    ```
-
-2. Open the client interface in your web browser:
+   
+2. If port is blocked 
+   ```bash
+   fuser -k 5000/tcp
+   ```
+   
+3. Open the client interface in your web browser:
    ```
    Client/index1.html
    ```

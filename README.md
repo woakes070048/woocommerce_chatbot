@@ -30,7 +30,7 @@ An intelligent chatbot assistant for WooCommerce stores that helps customers wit
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kadavilrahul/woocommerce_chatbot.git
+   git clone https://github.com/kadavilrahul/woocommerce_chatbot-under-testing.git
    ```
    ```bash
    cd woocommerce-chatbot

@@ -171,7 +171,7 @@ def search_products(product_name: str) -> str:
                 product_id = row[0]
                 product_title = row[1]
                 product_link = f"{WC_URL}/product/{product_title.lower().replace(' ', '-')}"
-                product_price = "$ " + row[2]
+                product_price = "Rs. " + row[2]
                 result.append(f"Product: {product_title}")
                 result.append(f"Link: {product_link}")
                 result.append(f"Price: {product_price}")

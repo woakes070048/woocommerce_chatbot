@@ -71,7 +71,7 @@ This guide focuses on a straightforward integration method by embedding the chat
 
 1. Clone the repository's folders and files to the current folder:
    ```bash
-   git clone https://github.com/kadavilrahul/woocommerce_chatbot-under-testing.git .
+   git clone https://github.com/kadavilrahul/chatbot_for_html_and_woocommerce.git .
    ```
 
 2. Create and activate a virtual environment:

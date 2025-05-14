@@ -1,7 +1,6 @@
 flask
 flask_cors
 agno
-mcp
 google-generativeai
 python-dotenv
 mysql-connector-python

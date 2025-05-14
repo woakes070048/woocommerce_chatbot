@@ -1,10 +1,11 @@
-# 🛒 WooCommerce ChatBot Assistant
+# 🛒 ChatBot Assistant for HTML website and Woocommerce
 
 An intelligent chatbot assistant for WooCommerce stores that helps customers with order status inquiries, product searches, and frequently asked questions.
 
 ## Introduction
 
-The WooCommerce Chatbot Assistant provides customer support features like order status tracking, product search, and FAQ assistance. This guide focuses on a straightforward integration method by embedding the chatbot interface within an iframe on your website.
+The Chatbot Assistant provides customer support features like order status tracking, product search, and FAQ assistance. 
+This guide focuses on a straightforward integration method by embedding the chatbot interface within an iframe on your website.
 
 ## ✨ Features
 

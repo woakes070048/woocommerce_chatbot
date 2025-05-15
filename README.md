@@ -1,11 +1,14 @@
-# 🛒 ChatBot Assistant for HTML website and Woocommerce
+# 🛒 ChatBot Assistant for Ecommerce website
 
-An intelligent chatbot assistant for WooCommerce stores that helps customers with order status inquiries, product searches, and frequently asked questions.
+An intelligent chatbot assistant for Ecommerce stores that helps customers with order status inquiries, product searches, and frequently asked questions.
 
 ## Introduction
 
-The Chatbot Assistant provides customer support features like order status tracking, product search, and FAQ assistance. 
-This guide focuses on a straightforward integration method by embedding the chatbot interface within an iframe on your website.
+- The Chatbot Assistant provides customer support features like order status tracking, product search, and FAQ assistance. 
+- Cuurenty version is set up foe Woocommerce website
+- It queries MySQL database of Wordpress to retrieve data about order status tracking, product search
+- It also queries CSV file saved in the project folder for FAQ assistance
+- It processes the data using LLM API to respond to the user
 
 ## ✨ Features
 
@@ -71,10 +74,12 @@ This guide focuses on a straightforward integration method by embedding the chat
 
 1. Clone the repository's folders and files to the current folder:
    ```bash
-   git clone https://github.com/kadavilrahul/chatbot_for_html_and_woocommerce.git .
+   git clone https://github.com/kadavilrahul/ecommerce_chatbot.git && cd ecommerce_chatbot
    ```
 
-2. Create and activate a virtual environment:
+2. Move files to the required folder as needed
+
+3. Create and activate a virtual environment:
    ```bash
    python3 -m venv venv
    ```
@@ -82,12 +87,12 @@ This guide focuses on a straightforward integration method by embedding the chat
    source venv/bin/activate
    ```
 
-3. Install dependencies:
+4. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Create a `.env` file with your credentials (based on sample.env.txt):
+5. Create a `.env` file with your credentials (based on sample.env.txt):
    ```
    DB_NAME=your_db
    DB_USER=your_user
@@ -98,13 +103,13 @@ This guide focuses on a straightforward integration method by embedding the chat
    DB_PORT=3306
    ```
 
-5. Prepare your FAQ data in a CSV file named `faq.csv` in the project root directory. Use tab-separated format. Check sample faq.csv file.
+6. Prepare your FAQ data in a CSV file named `faq.csv` in the project root directory. Use tab-separated format. Check sample faq.csv file.
    ```
    question	answer
    How do I reset my password?	Click the "Forgot Password" link on the login page and follow the instructions.
    ```
 
-6. Add Chat Widget to Your Web Page
+7. Add Chat Widget to Your Web Page
 
 Add the following snippet just after the **`</body>`** and before **`</html>`**in your website's HTML page:
 
@@ -121,13 +126,13 @@ Add the following snippet just after the **`</body>`** and before **`</html>`**i
 </div>
 ```
 
-7. Start the backend service:
+8. Start the backend service:
 
    ```bash
    python app.py
    ```
 
-8. You may check the chatbot functionality in the existing sample.html. 
+9. You may check the chatbot functionality in the existing sample.html. 
    If you have kept all files on your domain root line html folder then on browser enter below.
 
    ```bash

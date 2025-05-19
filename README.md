@@ -138,6 +138,27 @@ Add the following snippet just after the **`</body>`** and before **`</html>`**i
    ```bash
    your-server-ip/sample.html
    ```
+   
+10. If you get error "Port 5000 is in use by another program"
+
+   Run this command to find the process ID (PID) using port 5000:
+   ```bash
+   sudo lsof -i :5000
+   ```
+   You’ll see output like:
+
+   COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+   python3  1234 root    3u  IPv4  12345      0t0  TCP *:5000 (LISTEN)
+   How to Kill the Processes
+   Run:
+   ```bash
+   sudo kill -9 12730 12741
+   ```
+
+   After killing, check again:
+   ```bash
+   sudo lsof -i :5000
+   ```
 
 ## 🏃‍♀️ Note
 

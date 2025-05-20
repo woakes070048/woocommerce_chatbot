@@ -129,7 +129,10 @@ See image for refernece
 </div>
 
 ```
-
+8. Modify line 3 in file chatbot/js/script.js
+   const URL_API = "http://IP_ADDRESS_OR_DOMINANAME:5000";
+   Enter either IP Address or domain name
+   
 8. Start the backend service:
 
    ```bash

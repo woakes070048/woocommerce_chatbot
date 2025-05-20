@@ -1,288 +1,222 @@
-/* Entire Page Styling */
 body {
     font-family: 'Raleway', sans-serif;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    
     background-size: cover;
-    margin: 0;
-    padding: 0;
 }
 
-/* Chat widget container */
+
+/* ============= css related to chats =============== */
+
 .widget {
     display: none;
-    position: fixed;
-    right: 40px;
-    bottom: 5%;
-    width: 450px; /* Adjust this value to your desired width */
+    width: 500px;
+    right: 15px;
     height: 500px;
-    background: #ffffff;
-    border-radius: 20px;
+    bottom: 5%;
+    position: fixed;
+    background: #f7f7f7;
+    border-radius: 10px 10px 10px 10px;
     box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 #00000096;
-    overflow: visible;
-    z-index: 999;
-    transition: opacity 0.3s ease;
-}
-.widget.show {
-    display: block; /* Make the widget visible */
-}
-/* Bot avatar */
-.msgRow {
-    display: flex;
-    align-items: flex-start;
-    margin: 10px 0;
 }
 
-
-.botMsg {
-    background-color: #f1f0f0;
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: 10px;
-    margin-right: auto; /* Push it to the left */
-    max-width: 75%;
-    text-align: left;
-}
-
-
-
-.botAvatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-
-/* User avatar */
-.userAvatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: 10px;
-}
-
-/* Chat header */
 .chat_header {
-    position: relative; /* Add this line */
-    display: flex !important;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
-    background-color: #1976d2;
-    color: white;
-    z-index: 100;
-    overflow: visible !important;
-}
-
-/* Menu bar styling */
-.menu-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #f1f0f0; /* Light background for the menu bar */
+    height: 60px;
+    background: rgb(15, 82, 186);
+    border-radius: 10px 10px 0px 0px;
     padding: 5px;
-    border-radius: 20px 0 0 0;
-    z-index: 101; /* Above the chat header but below the close button */
-}
-
-.menu-button {
-    background-color: #1976d2; /* Button background color */
-    color: white; /* Button text color */
-    border: none;
-    padding: 5px 10px;
-    margin-right: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 12px;
-}
-
-.menu-button:hover {
-    background-color: #1565c0; /* Darker shade on hover */
-}
-
-
-.chat_close {
-    display: inline-block !important;
-    visibility: visible !important;
-    position: absolute;  /* Change to absolute positioning */
-    top: 10px;           /* Set distance from the top */
-    right: 15px;         /* Set distance from the right */
     font-size: 20px;
-    color: white;
-    cursor: pointer;
-    z-index: 1001;       /* Ensure it's on top of other elements */
-}
-
-
-
-.chat_close:hover {
-    color: #ff5252;
 }
 
 .chat_header_title {
     color: white;
-    margin-left: 10px;
-    font-weight: bold;
+    float: left;
+    margin-top: 3%;
+    margin-left: 22%;
 }
 
-/* Dropdown icon (optional) */
-.chat_header .material-icons {
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Dropdown menu styling (optional) */
-.dropdown-content {
-    z-index: 1000;
-}
-
-/* Chat message container */
 .chats {
+    /* display: none; */
     height: 385px;
-    padding: 10px;
-    overflow-y: auto; /* Ensure scrolling when needed */
+    padding: 2px;
+    border-radius: 1px;
+    overflow-y: scroll;
+    margin-top: 1px;
+    transition: 0.2s;
 }
 
-.chats::-webkit-scrollbar {
-    width: 0;
+div.chats::-webkit-scrollbar {
+    overflow-y: hidden;
+    width: 0px;
+    /* remove scrollbar space /
     background: transparent;
+    / optional: just make scrollbar invisible */
 }
 
-/* Messages */
-.botMsg, .userMsg {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 15px;  /* More space between messages */
-    border-radius: 1.5em;
-    word-wrap: break-word;
-    max-width: 80%;  /* Limit width for better control */
+.clearfix {
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
+.botAvatar {
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    float: left;
+    margin-left: 5px;
+    /* border: 2px solid  #2c53af ; */
+}
 
-/* Bot Message */
 .botMsg {
+    float: left;
+    margin-top: 5px;
     background: white;
     color: black;
     box-shadow: 2px 3px 9px 0px #9a82842e;
-}
-
-/* User Message */
-.userMsg {
-    background-color: #0084ff;
-    color: white;
+    margin-left: 0.5em;
     padding: 10px;
-    border-radius: 10px;
-    margin-right: 10px;
-    margin-left: auto; /* Push it to the right */
-    max-width: 75%;
-    text-align: right;
+    border-radius: 1.5em;
+    max-width: 60%;
+    min-width: 25%;
+    font-size: 13px;
+    word-wrap: break-word;
+    border-radius: 0 20px 20px 20px;
 }
 
-.msgRow.bot {
-    justify-content: flex-start; /* For bot messages, align them to the right */
+textarea {
+    box-shadow: none;
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    font-family: Raleway;
 }
-.msgRow.user {
-    justify-content: flex-start; /* For user messages, align them to the left */
+
+textarea::-webkit-input-placeholder {
+    font-family: Raleway;
 }
-/* Keypad / Input area */
+
+textarea-webkit-scrollbar {
+    width: 0 !important
+}
+
+.userMsg {
+    animation: animateElement linear 0.2s;
+    animation-iteration-count: 1;
+    margin-top: 5px;
+    word-wrap: break-word;
+    padding: 10px;
+    float: right;
+    margin-right: 0.5em;
+    background: #0F52BA;
+    color: white;
+    margin-bottom: 0.15em;
+    font-size: 13px;
+    max-width: 65%;
+    min-width: 15%;
+    border-radius: 20px 0px 20px 20px;
+    box-shadow: 0px 2px 5px 0px #9a828454;
+}
+
+.userAvatar {
+    animation: animateElement linear 0.3s;
+    animation-iteration-count: 1;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    float: right;
+    margin-right: 5px;
+    /* border: 2px solid  #2c53af ; */
+}
+
+.usrInput {
+    padding: 0.5em;
+    width: 80%;
+    margin-left: 4%;
+    border: 0;
+    padding-left: 15px;
+    height: 40px;
+}
+
 .keypad {
+    /* display: none;  */
     background: white;
     height: 50px;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
-    padding: 5px 10px;
-    border-radius: 0 0 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 5px;
+    border-radius: 0px 0px 10px 10px;
 }
 
-/* Text input */
-.usrInput {
-    flex: 1;
-    padding: 0.5em;
-    border: 0;
-    height: 40px;
-    font-family: Raleway;
-    font-size: 14px;
-}
-
-/* Send button */
 #sendButton {
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
     text-align: center;
-    font-size: 18px;
+    padding: 5px;
+    font-size: 20px;
     cursor: pointer;
     color: #44a799;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-/* Icon inside the send button */
-#sendButton i {
-    font-size: 16px;
-}
-
-/* Profile Image (chat trigger) */
 .imgProfile {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
+    box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 #00000096;
+    border-radius: 50px;
+    width: 70px;
 }
 
 .profile_div {
+    /* display: none; */
     position: fixed;
-    bottom: 15px;
-    right: 15px;
+    padding: 5px;
+    width: 10%;
+    bottom: 0;
+    right: 0;
     cursor: pointer;
-    z-index: 1000;
 }
 
 
+/* css for dropdown menu of the bot */
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+#close,
+#restart,
+#clear {
+    cursor: pointer;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0; /* aligns to the right edge of dropdown-trigger */
-    top: 100%; /* positions below the trigger */
-    background-color: white;
-    min-width: 120px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    border-radius: 6px;
-    z-index: 1001;
-    animation: animateElement 0.3s ease;
+.dropdown-trigger {
+    cursor: pointer;
+    color: white;
+    margin-right: 5px;
+    float: right;
+    margin-top: 3%;
 }
 
-.dropdown-content li {
-    list-style: none;
-    margin-bottom: 8px;
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: #0ab49e;
 }
 
-.dropdown-content li:last-child {
-    margin-bottom: 0;
+.close-button {
+    color: white;
+    float: right;
+    margin-top: 3%;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
-/* This class is toggled on click */
-.show-dropdown {
-    display: block;
+@keyframes animateElement {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
 }
-
 
 
 /*========== css related to chats elements============= */
@@ -482,7 +416,7 @@ div.content_data::-webkit-scrollbar {
 
 .menuChips {
     display: block;
-    background: #2c53af !important;
+    background: #2c53af;
     color: #fff;
     text-align: center;
     padding: 5px;
@@ -589,17 +523,6 @@ div.content_data::-webkit-scrollbar {
         -webkit-transform: translatex(0);
         -moz-transform: translatex(0);
         -o-transform: translatex(0);
-        transform: translatex(0);
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translatex(-10px);
-    }
-    to {
-        opacity: 1;
         transform: translatex(0);
     }
 }
@@ -722,7 +645,7 @@ div.content_data::-webkit-scrollbar {
 
 .chip {
     background-color: white;
-    border: 10px solid #2c53af;
+    border: 1px solid #2c53af;
     color: #2c53af;
     font-weight: bolder;
     text-align: center;
@@ -753,16 +676,15 @@ div.content_data::-webkit-scrollbar {
 
 .chart-container {
     position: relative;
-    margin: 5% auto; /* Center it horizontally */
-    height: 25vh; /* Still responsive, but consider max-height for larger charts */
-    width: 20vw; /* Responsive but might need tweaking depending on the content */
-    max-width: 500px; /* Optional max-width for better control on large screens */
-    max-height: 300px; /* Optional max-height if needed */
-    border-radius: 10px; /* Rounded corners */
+    margin: auto;
+    height: 25vh;
+    width: 20vw;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 5%;
     background: white;
     box-shadow: 2px 3px 9px 0px #9a82847a;
+    margin-top: 5px;
 }
-
 
 
 /* css for collapsible */

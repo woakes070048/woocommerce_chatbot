@@ -41,6 +41,9 @@ $(document).ready(function () {
 
   //if you want the bot to start the conversation
   // custom_action_trigger();
+
+  // Add welcome message
+  setBotResponse({ result: "Hey! Curious about products, tracking an order, or need info fast? Just ask!" });
 });
 
 function random(min, max) {
@@ -498,6 +501,13 @@ $("#clear").click(function () {
 
 //close function to close the widget.
 $("#close").click(function () {
+  $(".profile_div").toggle();
+  $(".widget").toggle();
+  scrollToBottomOfResults();
+});
+
+//close function for the close button in the header
+$(".close-button").click(function () {
   $(".profile_div").toggle();
   $(".widget").toggle();
   scrollToBottomOfResults();

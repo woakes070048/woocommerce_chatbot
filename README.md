@@ -111,11 +111,14 @@ An intelligent chatbot assistant for Ecommerce stores that helps customers with 
 
 7. Add Chat Widget to Your Web Page
 
-Add the following snippet just after the **`</body>`** and before **`</html>`**in your website's HTML page:
+Add the following snippet between </script> and </body> of HTML page at the bottom:
+See image for refernece
+![alt text](iframe_integration.png)
 
 ```html
+
 <!-- Floating Chatbot Widget -->
-<div style="position: fixed; bottom: 24px; right: 24px; width: 500px; height: 550px; z-index: 9999;">
+<div style="position: fixed; bottom: 24px; right: 24px; width: 750px; height: 550px; z-index: 9999;">
   <iframe 
     src="chatbot/widget.html" 
     frameborder="0" 
@@ -124,6 +127,7 @@ Add the following snippet just after the **`</body>`** and before **`</html>`**i
     title="Customer Support Chatbot">
   </iframe>
 </div>
+
 ```
 
 8. Start the backend service:

@@ -1,8 +1,6 @@
 // CONSTANTS
 
-//const URL_API = "http://34.121.32.194:5005";
-const URL_API = "http://95.216.202.18:5000";
-
+const URL_API = "http://IP_ADDRESS:5000";
 
 //Bot pop-up intro
 document.addEventListener("DOMContentLoaded", function () {

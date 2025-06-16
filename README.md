@@ -74,7 +74,10 @@ An intelligent chatbot assistant for Ecommerce stores that helps customers with 
 
 1. Clone the repository's folders and files to the current folder:
    ```bash
-   git clone https://github.com/kadavilrahul/ecommerce_chatbot.git && cd ecommerce_chatbot
+   git clone https://github.com/kadavilrahul/ecommerce_chatbot.git
+   ```
+   ```bash
+   cd ecommerce_chatbot
    ```
 
 2. Move files to the required folder as needed
